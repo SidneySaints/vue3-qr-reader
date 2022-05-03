@@ -7,7 +7,7 @@
     -->
     <video
       ref="video"
-      v-show="shouldScan"
+      :class="{ 'qrcode-stream-camera--hidden': !shouldScan }"
       class="qr-stream-camera"
       autoplay
       muted
