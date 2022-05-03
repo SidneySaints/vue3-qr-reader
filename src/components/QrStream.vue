@@ -165,7 +165,7 @@ export default defineComponent({
           if (state.destroyed) {
             state.cameraInstance.stop();
           }
-          emit('ready',state);
+
           return {
             capabilities,
           };
@@ -182,6 +182,7 @@ export default defineComponent({
       state.destroyed = true;
     });
     function startScanning() {
+      emit('ready',state);
       const detectHandler = (result) => {
         CommonApi.onDetect(Promise.resolve(result));
       };
