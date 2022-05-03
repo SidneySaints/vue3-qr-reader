@@ -156,6 +156,7 @@ export default defineComponent({
             torch: props.torch,
           });
 
+
           const capabilities = state.cameraInstance.getCapabilities();
 
           // if the component is destroyed before `cameraInstance` resolves a
@@ -164,7 +165,7 @@ export default defineComponent({
           if (state.destroyed) {
             state.cameraInstance.stop();
           }
-
+          emit('ready',state);
           return {
             capabilities,
           };
