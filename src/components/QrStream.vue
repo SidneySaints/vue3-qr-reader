@@ -304,6 +304,11 @@ export default defineComponent({
   left: 0;
 }
 
+.qrcode-stream-camera--hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
 .qr-stream-camera {
   width: 100%;
   height: 100%;
